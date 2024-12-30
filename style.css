@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .device-image {
+        @apply rounded-md border-4 border-black;
+    }
+
+    .features img {
+        display: none;
+    }
+
+    .features label:has(:checked)+img {
+        display: block;
+    }
+}
+
+@layer utilities {
+    .shadow-bg-1\/2 {
+        clip-path: inset(0 -100vmax 0 0);
+    }
+
+    .-shadow-bg-1\/2 {
+        clip-path: inset(0 0 0 -100vmax);
+    }
+}
